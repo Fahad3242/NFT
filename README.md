@@ -64,3 +64,31 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+---
+
+# Project Overview
+
+This project implements a basic NFT (Non-Fungible Token) smart contract using Solidity. The contract allows minting unique tokens and demonstrates fundamental NFT functionality.
+
+The main contract is `BasicNft.sol` located in the `src/` directory. It follows the ERC-721 standard for NFTs.
+
+# Deployment
+
+The project includes a deployment script `DeployBasicNft.s.sol` located in the `script/` directory. You can deploy the BasicNft contract using Foundry's scripting capabilities:
+
+```shell
+forge script script/DeployBasicNft.s.sol:DeployBasicNft --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast
+```
+
+Replace `<your_rpc_url>` and `<your_private_key>` with your Ethereum node RPC URL and private key respectively.
+
+# Testing
+
+Tests for the BasicNft contract are located in `test/BasicNftTest.t.sol`. You can run the tests using Forge:
+
+```shell
+forge test
+```
+
+This will execute the test suite and verify the functionality of the BasicNft contract.
