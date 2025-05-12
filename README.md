@@ -71,7 +71,7 @@ $ cast --help
 
 This project implements a basic NFT (Non-Fungible Token) smart contract using Solidity. The contract allows minting unique tokens and demonstrates fundamental NFT functionality.
 
-The main contract is `BasicNft.sol` located in the `src/` directory. It follows the ERC-721 standard for NFTs.
+The main contract is `BasicNft.sol` located in the `src/` directory. It follows the ERC-721 standard for NFTs. also mood nft which changes based on yoour mood
 
 # Deployment
 
