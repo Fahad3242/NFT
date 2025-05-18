@@ -5,13 +5,14 @@ import { Base64 } from "@openzeppelin/contracts/utils/Base64.sol";
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MoodNft is ERC721 {
-    string private s_sadSvg;
-    string private s_happySvg;
+    string private s_sadSvgImageUri;
+    string private s_happySvgImageUri;
     uint256 private s_tokenCounter;
 
     constructor(string memory sadSvgImageUri, string memory happySvgImageUri) ERC721("MoodNft", "MN") {
         s_sadSvgImageUri = sadSvgImageUri;
         s_happySvgImageUri = happySvgImageUri;
+        s_tokenCounter = 0;
 
     }
 
