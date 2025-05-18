@@ -40,24 +40,22 @@ contract MoodNft is ERC721 {
                 ImageUri = s_sadSvgImageUri;
             }
 
-        string memory tokenMetadata = string.concat(
-            return string(
-                abi.encodePacked(
-                _baseURI(),
-                    Base64.encode(
-                        bytes(
-                            abi.encodePacked(
-                                    '{"name: "',
+                string memory tokenMetadata = string(
+                    abi.encodePacked(
+                        _baseURI(),
+                        Base64.encode(
+                            bytes(
+                                abi.encodePacked(
+                                    '{"name": "',
                                     name(),
-                                    '", description: "An NFT that reflects your mood!", "attributes": [{"trait_type": "Mood", "value": 100}], "image": ',
-                                    imageURI,
+                                    '", "description": "An NFT that reflects your mood!", "attributes": [{"trait_type": "Mood", "value": 100}], "image": "',
+                                    ImageUri,
                                     '"}'
-                                    )
-                                )       
+                                )
                             )
-                        ) 
-                    )  
+                        )
+                    )
                 );
-
+            return tokenMetadata;
             }
         }
